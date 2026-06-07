@@ -55,7 +55,7 @@ st.divider()
 genai.configure(api_key=API_KEY)
 
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",   # free tier model
+    model_name="gemini-2.0-flash",   # free tier model
     system_instruction=SYSTEM_PROMPT
 )
 
