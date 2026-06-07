@@ -2,12 +2,12 @@ import streamlit as st
 import google.generativeai as genai
 
 # ─────────────────────────────────────────────
-#  CONFIG — paste your Gemini API key below
-#  Get it free from: https://aistudio.google.com
-#  OR store it in Streamlit Secrets (recommended
-#  for deployment — see deployment steps later)
+#  CONFIG — API key is read from Streamlit Secrets
+#  In Streamlit Community Cloud:
+#    Go to App Settings → Secrets → add:
+#    GEMINI_API_KEY = "your-key-here"
 # ─────────────────────────────────────────────
-API_KEY = "AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"   # ← REPLACE THIS
+API_KEY = st.secrets["GEMINI_API_KEY"]
 
 # ─────────────────────────────────────────────
 #  SYSTEM PROMPT — defines the agent's behaviour
